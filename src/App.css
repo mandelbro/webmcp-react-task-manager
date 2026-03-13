@@ -1,0 +1,288 @@
+/* ===== Reset & Base ===== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, sans-serif;
+  background: #f5f5f5;
+  color: #1a1a1a;
+  line-height: 1.5;
+}
+
+/* ===== App Layout ===== */
+
+.app {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.app__header {
+  margin-bottom: 1.5rem;
+}
+
+.app__title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #111;
+}
+
+.app__main {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* ===== Task Form ===== */
+
+.task-form__row {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.task-form__input {
+  flex: 1 1 200px;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.task-form__select {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  background: #fff;
+}
+
+.task-form__date {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.task-form__submit {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  background: #111;
+  color: #fff;
+  font-size: 0.95rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.task-form__submit:hover {
+  background: #333;
+}
+
+/* ===== Search Bar ===== */
+
+.search-bar {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.search-bar__input {
+  flex: 1;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.search-bar__select {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  background: #fff;
+}
+
+/* ===== Task List ===== */
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.task-list__empty {
+  text-align: center;
+  padding: 2rem;
+  color: #888;
+  font-size: 0.95rem;
+}
+
+/* ===== Task Card ===== */
+
+.task-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+}
+
+.task-card--completed {
+  opacity: 0.6;
+}
+
+.task-card--completed .task-card__title {
+  text-decoration: line-through;
+}
+
+.task-card__left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.task-card__checkbox {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.task-card__info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.task-card__title {
+  font-size: 0.95rem;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.task-card__due {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.task-card__right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.task-card__delete {
+  padding: 0.3rem 0.6rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #fff;
+  color: #c00;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.task-card__delete:hover {
+  background: #fef2f2;
+  border-color: #c00;
+}
+
+/* ===== Priority Badge ===== */
+
+.priority-badge {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.priority-badge--low {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.priority-badge--medium {
+  background: #fff7ed;
+  color: #9a3412;
+}
+
+.priority-badge--high {
+  background: #fef2f2;
+  color: #991b1b;
+}
+
+/* ===== Confirm Dialog ===== */
+
+.confirm-dialog__overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.confirm-dialog {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  max-width: 380px;
+  width: 90%;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+}
+
+.confirm-dialog__message {
+  margin-bottom: 1.25rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+.confirm-dialog__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.confirm-dialog__cancel {
+  padding: 0.4rem 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.confirm-dialog__cancel:hover {
+  background: #f5f5f5;
+}
+
+.confirm-dialog__confirm {
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 6px;
+  background: #dc2626;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.confirm-dialog__confirm:hover {
+  background: #b91c1c;
+}
