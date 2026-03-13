@@ -1,6 +1,6 @@
 # WebMCP React Task Manager
 
-A companion repository for the article ["I Built WebMCP Tools in React. The API Is Good. The Ecosystem Isn't."](https://medium.com/@monteslu)
+A companion repository for the article ["I Built WebMCP Tools in React. The API Is Good. The Ecosystem Isn't."]([https://medium.com/@monteslu](https://medium.com/@montes.makes/webmcp-in-practice-building-react-tools-for-chrome-146s-agent-api-21b3c5152a47))
 
 This is a React task manager app that demonstrates every WebMCP API surface: declarative HTML attributes, imperative `registerTool()`, human-in-the-loop confirmation, and the `useWebMCP` React hook. Clone it, enable the Chrome Canary flag, and see WebMCP tools register in under 5 minutes.
 
